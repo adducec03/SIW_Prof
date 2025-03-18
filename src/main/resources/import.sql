@@ -1,22 +1,22 @@
 --Inserisco film
 INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Inception', 2010, 'https://www.warnerbros.it/sites/default/files/1000178221_flat.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Dark Knight', 2008, 'https://example.com/the_dark_knight.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Interstellar', 2014, 'https://example.com/interstellar.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Pulp Fiction', 1994, 'https://example.com/pulp_fiction.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Matrix', 1999, 'https://example.com/the_matrix.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Fight Club', 1999, 'https://example.com/fight_club.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Forrest Gump', 1994, 'https://example.com/forrest_gump.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Shawshank Redemption', 1994, 'https://example.com/the_shawshank_redemption.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Godfather', 1972, 'https://example.com/the_godfather.jpg');
-INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Lord of the Rings: The Return of the King', 2003, 'https://example.com/the_lord_of_the_rings_the_return_of_the_king.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Dark Knight', 2008, 'https://m.media-amazon.com/images/S/pv-target-images/e9a43e647b2ca70e75a3c0af046c4dfdcd712380889779cbdc2c57d94ab63902.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Interstellar', 2014, 'https://pad.mymovies.it/filmclub/2014/01/001/locandina.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Pulp Fiction', 1994, 'https://m.media-amazon.com/images/I/71zSZQzlK+L.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Matrix', 1999, 'https://pad.mymovies.it/filmclub/2001/11/033/locandina.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Fight Club', 1999, 'https://m.media-amazon.com/images/M/MV5BOTgyOGQ1NDItNGU3Ny00MjU3LTg2YWEtNmEyYjBiMjI1Y2M5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'Forrest Gump', 1994, 'https://m.media-amazon.com/images/I/91++WV6FP4L._AC_UF1000,1000_QL80_.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Shawshank Redemption', 1994, 'https://m.media-amazon.com/images/M/MV5BMDAyY2FhYjctNDc5OS00MDNlLThiMGUtY2UxYWVkNGY2ZjljXkEyXkFqcGc@._V1_.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'The Godfather', 1972, 'https://m.media-amazon.com/images/M/MV5BNGEwYjgwOGQtYjg5ZS00Njc1LTk2ZGEtM2QwZWQ2NjdhZTE5XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg');
+INSERT INTO movie (id, title, year, url_image) VALUES (nextval('movie_seq'), 'https://m.media-amazon.com/images/M/MV5BMTZkMjBjNWMtZGI5OC00MGU0LTk4ZTItODg2NWM3NTVmNWQ4XkEyXkFqcGc@._V1_.jpg');
 
 --Inserisco artisti
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Christopher', 'Nolan', '1970-07-30');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Quentin', 'Tarantino', '1963-03-27');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Lana', 'Wachowski', '1965-06-21');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Lilly', 'Wachowski', '1967-12-29');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'David', 'Fincher', '1962-08-28');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Robert', 'Zemeckis', '1952-05-14');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Frank', 'Darabont', '1959-01-28');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Francis Ford', 'Coppola', '1939-04-07');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (nextval('artist_seq'), 'Peter', 'Jackson', '1961-10-31'); 
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Christopher', 'Nolan', '1970-07-30','https://upload.wikimedia.org/wikipedia/commons/thumb/9/95/Christopher_Nolan_Cannes_2018.jpg/640px-Christopher_Nolan_Cannes_2018.jpg');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Quentin', 'Tarantino', '1963-03-27','https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTOMq-e66rwFUcai66qN3mwmGGMWe9P7ttmWg&s');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Lana', 'Wachowski', '1965-06-21','https://m.media-amazon.com/images/M/MV5BMjEzMTc2MDQ5OV5BMl5BanBnXkFtZTcwNjkzNDY0OA@@._V1_.jpg');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Lilly', 'Wachowski', '1967-12-29','https://resizing.flixster.com/-XZAfHZM39UwaGJIFWKAE8fS0ak=/v3/t/assets/150670_v9_bb.jpg');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'David', 'Fincher', '1962-08-28','https://upload.wikimedia.org/wikipedia/commons/d/d1/TheKillerBFILFF051023_%288_of_22%29_%2853255176376%29_%28cropped2%29.jpg');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Robert', 'Zemeckis', '1952-05-14','https://upload.wikimedia.org/wikipedia/commons/thumb/d/d7/Robert_Zemeckis_%22The_Walk%22_at_Opening_Ceremony_of_the_28th_Tokyo_International_Film_Festival_%2821835891403%29_%28cropped%29.jpg/1200px-Robert_Zemeckis_%22The_Walk%22_at_Opening_Ceremony_of_the_28th_Tokyo_International_Film_Festival_%2821835891403%29_%28cropped%29.jpg');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Frank', 'Darabont', '1959-01-28','https://m.media-amazon.com/images/M/MV5BNjk0MTkxNzQwOF5BMl5BanBnXkFtZTcwODM5OTMwNA@@._V1_.jpg');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Francis Ford', 'Coppola', '1939-04-07','https://universome.unime.it/ygeelsoa/2020/04/Francis_Ford_Coppola_2011_CC.jpg');
+INSERT INTO artist (id, nome, cognome, nascita, url_image) VALUES (nextval('artist_seq'), 'Peter', 'Jackson', '1961-10-31','https://movieplayer.net-cdn.it/t/images/2003/09/11/peter-jackson-25745_jpg_400x0_crop_q85.jpg'); 

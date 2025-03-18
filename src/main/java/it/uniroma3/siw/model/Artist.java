@@ -14,7 +14,8 @@ public class Artist {
     private String nome;
     private String cognome;
     private java.time.LocalDate nascita;
-
+    private String urlImage;
+    
     public Long getId() {
         return id;
     }
@@ -39,7 +40,12 @@ public class Artist {
     public void setNascita(java.time.LocalDate nascita) {
         this.nascita = nascita;
     }
-
+    public String getUrlImage() {
+        return urlImage;
+    }
+    public void setUrlImage(String urlImage) {
+        this.urlImage = urlImage;
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -47,6 +53,7 @@ public class Artist {
         result = prime * result + ((nome == null) ? 0 : nome.hashCode());
         result = prime * result + ((cognome == null) ? 0 : cognome.hashCode());
         result = prime * result + ((nascita == null) ? 0 : nascita.hashCode());
+        result = prime * result + ((urlImage == null) ? 0 : urlImage.hashCode());
         return result;
     }
     @Override
@@ -72,6 +79,11 @@ public class Artist {
             if (other.nascita != null)
                 return false;
         } else if (!nascita.equals(other.nascita))
+            return false;
+        if (urlImage == null) {
+            if (other.urlImage != null)
+                return false;
+        } else if (!urlImage.equals(other.urlImage))
             return false;
         return true;
     }
