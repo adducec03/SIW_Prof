@@ -19,4 +19,8 @@ public class MovieService {
     public Iterable<Movie> getAllMovies() {
         return movieRepository.findAll();
     }
+
+    public void save(Movie movie){
+        movieRepository.save(movie);
+    }
 }
