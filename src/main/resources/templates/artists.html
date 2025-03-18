@@ -2,16 +2,16 @@
 <html>
 
     <head>
-        <title>Artista</title>
+        <title>Artisti</title>
         <link rel="stylesheet" href="/stile.css?version=2" />
     </head>
     <body>
         <div><a href="/"><img src="/logo-siw.png" width="50%"/></a></div>
-        <h1>Artista</h1>
+        <h1>Artisti</h1>
         <div th:if="${artists.isEmpty()}">Non ci sono film nel sistema</div>
         <ul>
             <li th:each="artist : ${artists}">
-                <a th:href="@{'/artist' + '/' + ${artist.id}}"th:text="${artist.nome} + ' ' + {artist.nome} + ' (' + ${artist.nascita} + ')'">Up! (2000)</a>
+                <a th:href="@{'/artist' + '/' + ${artist.id}}"th:text="${artist.nome} + ' ' + ${artist.nome} + ' (' + ${artist.nascita} + ')'">Up! (2000)</a>
             </li>
         </ul>
     </body>

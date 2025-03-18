@@ -19,4 +19,4 @@ INSERT INTO artist (id, nome, cognome, nascita) VALUES (5, 'David', 'Fincher', '
 INSERT INTO artist (id, nome, cognome, nascita) VALUES (6, 'Robert', 'Zemeckis', '1952-05-14');
 INSERT INTO artist (id, nome, cognome, nascita) VALUES (7, 'Frank', 'Darabont', '1959-01-28');
 INSERT INTO artist (id, nome, cognome, nascita) VALUES (8, 'Francis Ford', 'Coppola', '1939-04-07');
-INSERT INTO artist (id, nome, cognome, nascita) VALUES (9, 'Peter', 'Jackson', '1961-10-31');
+INSERT INTO artist (id, nome, cognome, nascita) VALUES (9, 'Peter', 'Jackson', '1961-10-31'); 
