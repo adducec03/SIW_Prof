@@ -1,5 +1,6 @@
 package it.uniroma3.siw.siw_jpa_es1.model;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
@@ -11,10 +12,14 @@ public class Address {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(nullable = false)
     private String street;
+    @Column(nullable = false)
     private String city;
     private String state;
+    @Column(nullable = false)
     private String zipcode;
+    @Column(nullable = false)
     private String country;
     
     public Long getId() {
@@ -53,7 +58,6 @@ public class Address {
     public void setCountry(String country) {
         this.country = country;
     }
-
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -66,7 +70,6 @@ public class Address {
         result = prime * result + ((country == null) ? 0 : country.hashCode());
         return result;
     }
-    
     @Override
     public boolean equals(Object obj) {
         if (this == obj)
@@ -108,4 +111,6 @@ public class Address {
             return false;
         return true;
     }
+    
 }
+    

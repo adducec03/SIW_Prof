@@ -3,10 +3,12 @@ package it.uniroma3.siw.siw_jpa_es1.model;
 import java.time.LocalDate;
 import java.time.LocalDateTime;
 
+import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToOne;
 
 @Entity
 public class Customer {
@@ -14,13 +16,16 @@ public class Customer {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Long id;
+    @Column(nullable = false)
     private String firstName;
+    @Column(nullable = false)
     private String lastName;
     private String email;
     private String phoneNumber;
     private LocalDate dateOfBirth;
     private LocalDateTime registrationDate;
-    
+    @OneToOne
+    private Address address;
     public Long getId() {
         return id;
     }
@@ -63,6 +68,12 @@ public class Customer {
     public void setRegistrationDate(LocalDateTime registrationDate) {
         this.registrationDate = registrationDate;
     }
+    public Address getAddress() {
+        return address;
+    }
+    public void setAddress(Address address) {
+        this.address = address;
+    }
     @Override
     public int hashCode() {
         final int prime = 31;
@@ -74,6 +85,7 @@ public class Customer {
         result = prime * result + ((phoneNumber == null) ? 0 : phoneNumber.hashCode());
         result = prime * result + ((dateOfBirth == null) ? 0 : dateOfBirth.hashCode());
         result = prime * result + ((registrationDate == null) ? 0 : registrationDate.hashCode());
+        result = prime * result + ((address == null) ? 0 : address.hashCode());
         return result;
     }
     @Override
@@ -120,6 +132,14 @@ public class Customer {
                 return false;
         } else if (!registrationDate.equals(other.registrationDate))
             return false;
+        if (address == null) {
+            if (other.address != null)
+                return false;
+        } else if (!address.equals(other.address))
+            return false;
         return true;
     }
+
 }
+    
+    
