@@ -2,15 +2,20 @@ package it.uniroma3.siw.siw_jpa_es1.model;
 
 import java.time.LocalDate;
 import java.time.LocalDateTime;
+import java.util.List;
 
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.OneToMany;
 import jakarta.persistence.OneToOne;
+import jakarta.persistence.Table;
+import jakarta.persistence.UniqueConstraint;
 
 @Entity
+@Table(uniqueConstraints=@UniqueConstraint(columnNames={"firstName","lastName","dateOfBirth"}))
 public class Customer {
 
     @Id
@@ -26,6 +31,15 @@ public class Customer {
     private LocalDateTime registrationDate;
     @OneToOne
     private Address address;
+    @OneToMany(mappedBy = "payer")
+    private List<Order> payedOrders;
+    @OneToMany(mappedBy = "deliver")
+    private List<Order> orders;
+
+    //---------------------------METODI------------------------------//
+
+
+    
     public Long getId() {
         return id;
     }
@@ -78,7 +92,6 @@ public class Customer {
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + ((id == null) ? 0 : id.hashCode());
         result = prime * result + ((firstName == null) ? 0 : firstName.hashCode());
         result = prime * result + ((lastName == null) ? 0 : lastName.hashCode());
         result = prime * result + ((email == null) ? 0 : email.hashCode());
@@ -97,11 +110,6 @@ public class Customer {
         if (getClass() != obj.getClass())
             return false;
         Customer other = (Customer) obj;
-        if (id == null) {
-            if (other.id != null)
-                return false;
-        } else if (!id.equals(other.id))
-            return false;
         if (firstName == null) {
             if (other.firstName != null)
                 return false;
@@ -139,6 +147,19 @@ public class Customer {
             return false;
         return true;
     }
+    public List<Order> getOrders() {
+        return orders;
+    }
+    public void setOrders(List<Order> orders) {
+        this.orders = orders;
+    }
+    public List<Order> getPayedOrders() {
+        return payedOrders;
+    }
+    public void setPayedOrders(List<Order> payedOrders) {
+        this.payedOrders = payedOrders;
+    }
+    
 
 }
     
