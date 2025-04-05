@@ -1,11 +1,13 @@
-package it.uniroma3.siw;
+package it.uniroma3.siw.siw_jpa_02;
+
+import java.util.List;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
-import it.uniroma3.siw.siw_jpa_02.model.Address;
+//import it.uniroma3.siw.siw_jpa_02.model.Address;
 import it.uniroma3.siw.siw_jpa_02.model.Customer;
 import it.uniroma3.siw.siw_jpa_02.repository.AddressRepository;
 import it.uniroma3.siw.siw_jpa_02.repository.CustomerRepository;
@@ -27,7 +29,7 @@ public class SiwJpa02Application implements CommandLineRunner {
 	@Transactional
 	@Override
 	public void run(String... args) throws Exception {
-		Customer customer = new Customer();
+		/*Customer customer = new Customer();
 		Address address = new Address();
 		address.setStreet("vicolo corto");
 		address.setCity("Roma");
@@ -37,11 +39,15 @@ public class SiwJpa02Application implements CommandLineRunner {
 		customer.setLastName("ciaociao");
 		
 		customer.setAddress(address);
-		System.out.println(customer.toString());
-		addressRepository.save(address);
 		customerRepository.save(customer);
 
-		System.out.println(customer.toString());
+		System.out.println(customer.toString());*/
+		List<Customer> customers = (List<Customer>) customerRepository.findAll();
+		for (Customer customer : customers) {
+			customer.toString();
+			customer.getAddress().toString();
+			
+		}
 	}
 
 }

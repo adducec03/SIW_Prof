@@ -4,8 +4,10 @@ import java.time.LocalDate;
 import java.time.LocalDateTime;
 import java.util.List;
 
+import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
+import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
@@ -29,7 +31,7 @@ public class Customer {
     private String phoneNumber;
     private LocalDate dateOfBirth;
     private LocalDateTime registrationDate;
-    @OneToOne
+    @OneToOne (fetch=FetchType.LAZY ,cascade={CascadeType.PERSIST, CascadeType.REMOVE})
     private Address address;
     @OneToMany(mappedBy = "payer")
     private List<Order> payedOrders;
